@@ -50,19 +50,53 @@ graph TD
     A[User Request] -->|Conversational Input| B(Research GPT)
     
 ```mermaid
-    subgraph GPT_Logic_Engine [Logic & Transformation]
-        B --> C{Trigger Check}
-        C -->|Discussion| B
-        C -->|PDF Request| D[Content Synthesis]
-        D --> E[HTML/CSS Mapping]
-        E --> F[Keep-Together Logic Applied]
-    end
-    subgraph External_API [APITemplate.io]
-        F -->|JSON Payload| G[REST API Endpoint]
-        G --> H[Template ID: 0c677b23...]
-        H --> I[PDF Generation Engine]
-    end
-    I -->|Download URL| J[User Receives PDF]
+    graph TD
+    %% Root Node
+    Root[research-gpt-api/]
+    
+    %% Main Folders
+    Sub1[.github/]
+    Sub2[assets/]
+    Sub3[gpt-configuration/]
+    Sub4[web-assets/]
+    Sub5[examples/]
+    Sub6[README.md]
+
+    %% Connections to Folders
+    Root --> Sub1
+    Root --> Sub2
+    Root --> Sub3
+    Root --> Sub4
+    Root --> Sub5
+    Root --> Sub6
+
+    %% Assets Folder Files
+    Sub2 --> A1[ResearchGPT_Workflow-.png]
+    Sub2 --> A2[Sample-output.png]
+    Sub2 --> A3[Final Output.pdf]
+    Sub2 --> A4[Sample Conversation Output.png]
+
+    %% GPT Configuration Folder Files
+    Sub3 --> G1[instructions.md]
+    Sub3 --> G2[openapi-schema.yaml]
+    Sub3 --> G3[Conversation-starters.md]
+    Sub3 --> G4[Gpt_actions.md]
+
+    %% Web Assets Folder Files
+    Sub4 --> W1[base-styles.css]
+    Sub4 --> W2[template-structure.html]
+
+    %% Examples Folder Files
+    Sub5 --> E1[raw-chat-context.png]
+    Sub5 --> E2[api-payload-sample.json]
+
+    %% Styling
+    style Root fill:#f9f,stroke:#333,stroke-width:2px
+    style Sub6 fill:#bbf,stroke:#333,stroke-width:1px
+    style Sub2 fill:#dfd,stroke:#333
+    style Sub3 fill:#dfd,stroke:#333
+    style Sub4 fill:#dfd,stroke:#333
+    style Sub5 fill:#dfd,stroke:#333
 ```
     
 ⚙️ Technical Workflow
