@@ -49,7 +49,8 @@ research-gpt-api/
 graph TD
     A[User Request] -->|Conversational Input| B(Research GPT)
     
-    ''' mermaid subgraph GPT_Logic_Engine [Logic & Transformation]
+    ''' mermaid 
+    subgraph GPT_Logic_Engine [Logic & Transformation]
         B --> C{Trigger Check}
         C -->|Discussion| B
         C -->|PDF Request| D[Content Synthesis]
@@ -63,7 +64,8 @@ graph TD
         H --> I[PDF Generation Engine]
     end
     
-    I -->|Download URL| J[User Receives PDF]'''
+    I -->|Download URL| J[User Receives PDF]
+    '''
     
 ⚙️ Technical Workflow
 The system operates through a three-tier transformation process:
