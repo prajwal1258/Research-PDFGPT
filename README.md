@@ -25,29 +25,6 @@ API Orchestration: Real-time integration with APITemplate.io for instant PDF gen
 Structured Data Mapping: Converts natural language into a strictly validated JSON payload.
 
 📂Repository Structure
-
-research-gpt-api/
-├── .github/
-├── assets/                        # Portfolio visuals
-│   ├── ResearchGPT_Workflow-.png  # Flow: User -> GPT -> HTML -> APITemplate -> PDF
-│   ├── Sample-output.png        # Screenshot of the GPT in action
-│   └── Final Output.pdf         # A high-quality export final Pdf generated 
-|   └── Sample Conversation Output.png     # The APITemplate.io API definition
-├── gpt-configuration/          # The "Backend" of your GPT
-│   ├── instructions.md         # Your expert assistant system prompt
-│   └── openapi-schema.yaml     # The APITemplate.io API definition
-|   └── Conversation-starters.md     # Conversation starter statements
-|   └── Gpt_actions.md          # GPT Actions summary
-├── web-assets/                 # The "Frontend" logic
-│   ├── base-styles.css         # The CSS that handles .keep-together and .highlight
-│   └── template-structure.html # The skeleton HTML used in APITemplate.io
-├── examples/                   # Demonstrating the data transformation
-│   ├── raw-chat-context.png     # Example of a research conversation
-│   └── api-payload-sample.json # The final JSON sent to the API
-├── README.md                   # Project documentation 
-
-graph TD
-    A[User Request] -->|Conversational Input| B(Research GPT)
     
 ```mermaid
     graph TD
