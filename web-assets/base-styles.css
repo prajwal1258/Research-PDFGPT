@@ -1,0 +1,100 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	body {
+		-webkit-font-smoothing: antialiased;
+		background: white;
+	}
+	.text-label {
+		font-family: "Bungee", sans-serif;
+	}
+	.text-label2 {
+		font-family: "Lusitana", sans-serif;
+	}
+	.table {
+		border: 1px solid black;
+		margin: 10px;
+	}
+	.table th,
+	.table td {
+		border: 1px solid black;
+		padding: 10px 20px 10px 20px;
+	}
+	.table.center {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.section {
+		padding: 10px 20px 10px 20px;
+	}
+	
+	/* Page break control for better PDF rendering */
+	h1, h2, h3, h4, h5, h6 {
+		page-break-after: avoid;
+		page-break-inside: avoid;
+	}
+	
+	p {
+		page-break-inside: avoid;
+		orphans: 3;
+		widows: 3;
+	}
+	
+	ul, ol {
+		page-break-inside: avoid;
+		margin-bottom: 0;
+	}
+	
+	li {
+		page-break-inside: avoid;
+		page-break-after: auto;
+		margin-bottom: 0.5em;
+	}
+	
+	/* Keep the last item in a list from having extra space */
+	li:last-child {
+		margin-bottom: 0;
+	}
+	
+	/* Keep info boxes, highlights, and sections together */
+	.info-box, .highlight, .section {
+		page-break-inside: avoid;
+		page-break-after: auto;
+	}
+	
+	/* Tables should not break */
+	.table {
+		page-break-inside: avoid;
+	}
+	
+	/* Code blocks and quotes */
+	pre, blockquote {
+		page-break-inside: avoid;
+	}
+	
+	/* Ensure proper spacing before new sections */
+	h1 {
+		margin-top: 2em;
+		page-break-before: auto;
+	}
+	
+	/* First h1 doesn't need top margin */
+	h1:first-child {
+		margin-top: 0;
+	}
+	
+	/* Global orphan/widow control */
+	* {
+		orphans: 3;
+		widows: 3;
+	}
+	
+	/* Optional: Force major sections to start on new page */
+	/* Uncomment if you want each h1 to start fresh */
+	/* h1 {
+		page-break-before: always;
+	} */
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lusitana">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>

@@ -1,0 +1,56 @@
+openapi: 3.1.0
+info:
+  title: APITemplate.io PDF Generator
+  version: 1.0.0
+  description: Generate PDFs using APITemplate.io API
+servers:
+  - url: https://rest.apitemplate.io/v2
+
+paths:
+  /create-pdf:
+    post:
+      operationId: createPDF
+      summary: Create a PDF from template
+      description: Generate a PDF document using APITemplate.io
+      parameters:
+        - name: template_id
+          in: query
+          required: true
+          schema:
+            type: string
+            default: {add your template_id}
+          description: Your template ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: Report title
+                date:
+                  type: string
+                  description: Report date
+                body:
+                  type: string
+                  description: HTML content for the report
+              additionalProperties: true
+              description: JSON data to merge with template
+      responses:
+        "200":
+          description: Document created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  download_url:
+                    type: string
+                  download_url_png:
+                    type: string
+                  transaction_ref:
+                    type: string
