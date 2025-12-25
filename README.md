@@ -1,3 +1,6 @@
+# Research-PDFGPT
+Transforms user data and HTML templates into clean, ready-to-download PDFs.
+
 A specialized GPT architecture designed to transform conversational research into publication-ready PDF reports. This project bridges the gap between AI-driven knowledge synthesis and professional document formatting using OpenAI Actions and APITemplate.io.
 
 🚀 The Problem
