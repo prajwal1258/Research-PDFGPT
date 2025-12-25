@@ -43,6 +43,25 @@ research-gpt-api/
 │   └── api-payload-sample.json # The final JSON sent to the API
 ├── README.md                   # Project documentation 
 
+graph TD
+    A[User Request] -->|Conversational Input| B(Research GPT)
+    
+    subgraph GPT_Logic_Engine [Logic & Transformation]
+        B --> C{Trigger Check}
+        C -->|Discussion| B
+        C -->|PDF Request| D[Content Synthesis]
+        D --> E[HTML/CSS Mapping]
+        E --> F[Keep-Together Logic Applied]
+    end
+    
+    subgraph External_API [APITemplate.io]
+        F -->|JSON Payload| G[REST API Endpoint]
+        G --> H[Template ID: 0c677b23...]
+        H --> I[PDF Generation Engine]
+    end
+    
+    I -->|Download URL| J[User Receives PDF]
+    
 ⚙️ Technical Workflow
 The system operates through a three-tier transformation process:
 
