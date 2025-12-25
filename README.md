@@ -49,7 +49,7 @@ research-gpt-api/
 graph TD
     A[User Request] -->|Conversational Input| B(Research GPT)
     
-    ''' mermaid 
+''' mermaid 
     subgraph GPT_Logic_Engine [Logic & Transformation]
         B --> C{Trigger Check}
         C -->|Discussion| B
@@ -58,14 +58,13 @@ graph TD
         E --> F[Keep-Together Logic Applied]
     end
     
-    subgraph External_API [APITemplate.io]
+subgraph External_API [APITemplate.io]
         F -->|JSON Payload| G[REST API Endpoint]
         G --> H[Template ID: 0c677b23...]
         H --> I[PDF Generation Engine]
     end
-    
-    I -->|Download URL| J[User Receives PDF]
-    '''
+I -->|Download URL| J[User Receives PDF]
+'''
     
 ⚙️ Technical Workflow
 The system operates through a three-tier transformation process:
