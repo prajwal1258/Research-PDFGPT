@@ -80,6 +80,3 @@ Copy the content of gpt-configuration/instructions.md into the "Instructions" se
 Raw Chat: View Sample Conversation
 
 Generated PDF: Download Sample Report
-
-🤝 Contributing & Portfolio Use
-This repository was created to demonstrate the capability of building Production-Grade AI Tools. Feel free to explore the prompt logic to see how conditional formatting and API schemas are handled in a no-code environment.
