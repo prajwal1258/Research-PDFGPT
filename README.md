@@ -49,7 +49,7 @@ research-gpt-api/
 graph TD
     A[User Request] -->|Conversational Input| B(Research GPT)
     
-    '''subgraph GPT_Logic_Engine [Logic & Transformation]
+    ''' mermaid subgraph GPT_Logic_Engine [Logic & Transformation]
         B --> C{Trigger Check}
         C -->|Discussion| B
         C -->|PDF Request| D[Content Synthesis]
